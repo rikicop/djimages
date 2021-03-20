@@ -5,7 +5,7 @@ def inmueble_view(request):
     inmuebles = Inmueble.objects.all()
     return render(request, 'inmueble.html', {'inmuebles':inmuebles})
 
-def detail_view(request, id):
+def detalle_view(request, id):
     inmueble = get_object_or_404(Inmueble, id=id)
     #Va a filtrar un inmueble en particular
     fotos = InmuebleImage.objects.filter(inmueble=inmueble)
